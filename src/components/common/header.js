@@ -1,14 +1,13 @@
 // Import libraries for making a component
 import React, { Component } from 'react';
 import {
-  AppRegistry,
   StyleSheet,
   Text,
   View
 } from 'react-native';
 
 // Make a component
-export default class Header extends Component {
+export class Header extends Component {
   render(){
     return ( 
       <View style = {styles.viewStyle}>
@@ -20,11 +19,23 @@ export default class Header extends Component {
 // Make the component available to other parts of the app
 const styles =StyleSheet.create({
   viewStyle: {
-    backgroundColor: '#F8F8F8',
+    alignSelf: 'stretch',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: "#fff",
+    flexDirection: 'row',
+    elevation: 8,
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    shadowOffset: {
+        width: 0,
+        height: 2
+    },
+    height: 40
   },
   textStyle: {
     fontSize: 20
     }
 });
+
+
