@@ -11,16 +11,22 @@ import {
   Text,
   View
 } from 'react-native';
-import Header from './src/components/header'
+import Header from './src/components/header';
+import AlbumList from './src/components/AlbumList';
 
 
 export default class App extends Component{
   render(){
-    return ( 
-      <Header headerText = {'Albums'} />
+    return (
+      <View style={{flex: 1}}>
+        <Header headerText = {'Albums'} />
+        <AlbumList/>
+      </View>
     );
 }
 }
+
+// Class Component => dynamic source of data, fecthing data, user events
 // export default class appInit extends Component {
 //   render() {
 //     return (
@@ -39,6 +45,22 @@ export default class App extends Component{
 //     );
 //   }
 // }
+
+
+/*
+//Functional Component: static data, 
+
+ const AlbumList = () => {
+    return (
+      <View>
+        <Text>Album List!!</Text>
+      </View>
+    );
+ };
+
+export default AlbumList;
+
+ */
 
 const styles = StyleSheet.create({
   container: {
