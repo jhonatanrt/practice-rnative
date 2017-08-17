@@ -31,7 +31,8 @@ const styles =StyleSheet.create({
         width: 0,
         height: 2
     },
-    height: 40
+    height: 40,
+    marginBottom: 20
   },
   textStyle: {
     fontSize: 20

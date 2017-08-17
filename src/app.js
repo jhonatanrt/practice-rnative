@@ -7,11 +7,13 @@ import {
 } from 'react-native';
 import firebase from 'firebase';
 
-import { Header } from './components/common';
+import { Header, Button, CardSection, Spinner } from './components/common';
 import LoginForm from './components/LoginForm'
 
 
 export default class App extends Component {
+
+  state = { loggedIn: null };
 
   componentWillMount(){
     firebase.initializeApp({
@@ -22,13 +24,36 @@ export default class App extends Component {
       storageBucket: "auth-reactnative-7aea6.appspot.com",
       messagingSenderId: "322094498978"
     });
+
+    firebase.auth().onAuthStateChanged((user)=>{
+      if(user){
+        this.setState({ loggedIn: true});
+      }
+      else{
+        this.setState({ loggedIn: false});
+      }
+    });
+  }
+
+  renderContent(){
+    switch (this.state.loggedIn) {
+      case true:
+        return (<CardSection>
+          <Button onPress={() => firebase.auth().signOut()}>Log out</Button>
+        </CardSection>);
+      case false:
+        return <LoginForm/>;
+      default:
+        return <Spinner size="large"/>;
+    }
+
   }
 
   render(){
     return ( 
       <View>
         <Header headerText = {'Inicio de sesion'} />
-        <LoginForm/>
+        {this.renderContent()}
       </View>
     );
   }
@@ -42,5 +67,8 @@ const styles =StyleSheet.create({
   },
   textStyle: {
     fontSize: 20
-    }
+    },
+  buttonStyle:{
+    marginTop: 100
+  }
 });
