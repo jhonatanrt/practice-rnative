@@ -11,20 +11,21 @@ import {
   Text,
   View
 } from 'react-native';
-import Header from './src/components/header';
-import AlbumList from './src/components/AlbumList';
+// import Header from './src/components/header';
+// import AlbumList from './src/components/AlbumList';
+import App from './src/app'
 
 
-export default class App extends Component{
-  render(){
-    return (
-      <View style={{flex: 1}}>
-        <Header headerText = {'Albums'} />
-        <AlbumList/>
-      </View>
-    );
-}
-}
+// export default class App extends Component{
+//   render(){
+//     return (
+//       <View style={{flex: 1}}>
+//         <Header headerText = {'Albums'} />
+//         <AlbumList/>
+//       </View>
+//     );
+// }
+// }
 
 // Class Component => dynamic source of data, fecthing data, user events
 // export default class appInit extends Component {
@@ -62,23 +63,24 @@ export default AlbumList;
 
  */
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     backgroundColor: '#F5FCFF',
+//   },
+//   welcome: {
+//     fontSize: 20,
+//     textAlign: 'center',
+//     margin: 10,
+//   },
+//   instructions: {
+//     textAlign: 'center',
+//     color: '#333333',
+//     marginBottom: 5,
+//   },
+// });
 
+// AppRegistry.registerComponent('appInit', () => App);
 AppRegistry.registerComponent('appInit', () => App);

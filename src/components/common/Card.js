@@ -6,7 +6,7 @@ import {
   View
 } from 'react-native';
 
-export default class Card extends Component {
+export class Card extends Component {
   render(){
     return ( 
         <View style={styles.containerStyle}>
@@ -31,7 +31,6 @@ const styles = StyleSheet.create({
         shadowRadius: 2,
         elevation: 1,
         marginLeft: 5,
-        marginRight: 5,
-        marginTop: 10
+        marginRight: 5
     }
 })

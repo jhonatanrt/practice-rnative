@@ -5,7 +5,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-export default class Button extends Component {
+export class Button extends Component {
   render(){
     return ( 
       <TouchableOpacity onPress={this.props.onPress} style={styles.buttonStyle}>

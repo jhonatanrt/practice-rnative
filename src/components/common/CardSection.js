@@ -5,7 +5,7 @@ import {
   View
 } from 'react-native';
 
-export default class CardSection extends Component {
+export class CardSection extends Component {
   render(){
     return ( 
         <View style={styles.containerStyle}>
