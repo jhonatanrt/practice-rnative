@@ -67,7 +67,7 @@ export default class App extends Component{
   render(){
     return(
       <Provider store={createStore(reducers)}>
-        <View>
+        <View style={{ flex: 1 }}>
           <Header headerText = 'Inicio de sesion' />
           <LibraryList/>
         </View>
@@ -75,17 +75,3 @@ export default class App extends Component{
     );
   }
 }
-
-const styles =StyleSheet.create({
-  viewStyle: {
-    backgroundColor: '#F8F8F8',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  textStyle: {
-    fontSize: 20
-    },
-  buttonStyle:{
-    marginTop: 100
-  }
-});

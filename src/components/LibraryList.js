@@ -34,18 +34,6 @@ class LibraryList extends Component {
   }
 }
 
-const styles =StyleSheet.create({
-  viewStyle: {
-    backgroundColor: '#F8F8F8',
-    justifyContent: 'center',
-    alignItems: 'center'
-    },
-  textStyle: {
-    fontSize: 20,
-    color: '#683030'
-    }
-});
-
 const mapStateToProps = state => {
     return { libraries: state.libraries };
 }
